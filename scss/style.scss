@@ -1,0 +1,456 @@
+@import 'reset.scss';
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Press+Start+2P&display=swap';
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(10px, 3vw, 16px);
+    color: #000;
+}
+
+
+.container {
+    max-width: 1170px;
+    padding: 0 30px 0 30px;
+    margin: 0 auto;
+}
+
+
+
+/*=========== HEADER ===========*/
+
+.home {
+    height: 100vh;
+    position: relative;
+    background-color: rgb(255, 255, 255, .2);
+}
+
+.home__video-bg video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+.home__logo {
+    padding-top: 2em;
+    z-index: 10;
+    position: relative;
+}
+
+
+
+
+
+
+.home__title {
+    position: relative;
+    margin-top: -65px;
+    text-align: center;
+    color: #d6d7fa;
+    font-size: clamp(16px, 3vw, 22px);
+    text-shadow: 1px 1px 60px #fff;
+}
+
+
+/*=========== HOME ===========*/
+
+
+.home__desc {
+    position: relative;
+    text-align: center;
+    margin-top: 7em;
+}
+
+.home__desc-subtitle {
+    line-height: 29px;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    padding: 1em;
+    border-radius: 15px;
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #fff1;
+    backdrop-filter: blur(10px);
+    text-shadow: 1px 1px 3px #fff;
+}
+
+.home__desc-title {
+    font-family: 'Press Start 2P';
+    padding-top: 0.5em;
+    font-size: clamp(24px, 4.5vw, 50px);
+    line-height: 1.3em;
+    letter-spacing: 0.07em;
+    color: #07e8f8;
+    text-shadow: 3px 5px 1px #081f87fe;
+
+}
+
+
+
+.home__arrow {
+    position: relative;
+    margin-top: 2em;
+    text-align: center;
+}
+
+.fa-chevron-down {
+    font-size: 3em;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    transition: all .3s ease;
+}
+
+.fa-chevron-down:hover {
+    transform: translateY(5px);
+}
+
+
+
+
+
+
+/*=========== HOME-LINKS ===========*/
+
+
+.home__links {
+    position: absolute;
+    bottom: 2em;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 10px;
+
+    max-width: 40em;
+    height: 5em;
+    background-color: rgb(0, 0, 0, .6);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 1px -5px 35px rgba(8, 220, 239, 0.496);
+}
+
+
+
+
+
+
+.home__link-vk {
+    margin-right: 5em;
+    display: flex;
+}
+
+.home__vk-text {
+    padding: 0.5em 1em 0 0;
+}
+
+.home__link-tg {
+    display: flex;
+}
+
+.home__tg-text {
+    padding: 0.5em 1em 0 0;
+}
+
+
+.fa-brands {
+    background: radial-gradient(white 50%, transparent 60%);
+    transition: all .2s ease;
+}
+
+.fa-vk {
+    color: rgb(54, 104, 231);
+    font-size: 2.3em;
+}
+
+.fa-telegram {
+    color: rgb(13, 148, 245);
+    font-size: 2.3em;
+}
+
+.fa-brands:hover {
+    transform: scale(1.1);
+    opacity: .8;
+}
+
+
+
+
+
+
+
+
+/*=========== MAIN ===========*/
+
+
+
+
+
+.portfolio {
+    background-color: #ECECEB;
+    padding: 60px 0 80px 0;
+}
+
+
+
+
+
+.portfolio__title {
+    font-family: 'Press Start 2P';
+    line-height: 40px;
+    letter-spacing: 0.07em;
+    text-align: center;
+    font-size: 1.3em;
+    text-shadow: #000000 1px 1px 3px;
+}
+
+.portfolio__desc {
+    font-weight: 500;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    max-width: 850px;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+
+.portfolio__desc::before,
+.portfolio__desc::after {
+    content: '';
+    position: absolute;
+    border: solid red;
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
+}
+
+
+
+.portfolio__desc::before {
+    top: 20px;
+    left: -40px;
+    border-width: 3px 0 0 3px;
+}
+
+
+
+.portfolio__desc::after {
+    bottom: -20px;
+    right: -20px;
+    border-width: 0 3px 3px 0;
+}
+
+
+
+
+
+
+.portfolio__about {
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+    padding: 60px 0;
+}
+
+
+.portfolio__about-row {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.portfolio__about figure+figure {
+    margin-left: 2em;
+}
+
+
+
+
+.portfolio__about-title {
+    font-family: 'Press Start 2P';
+    font-size: 1.3em;
+    text-align: center;
+    color: #fff;
+    text-shadow: #fff 1px 1px 8px;
+}
+
+
+
+.portfolio__about-desc {
+    font-weight: 500;
+    line-height: 1em;
+    text-align: center;
+    letter-spacing: 0.1em;
+    max-width: 650px;
+    margin: 2em auto 3em auto;
+    color: #ffffff;
+    text-shadow: #fff 1px 1px 26px;
+}
+
+
+
+
+.hovering {
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    border: 4px #ffffff solid;
+    border-radius: 15px;
+}
+
+
+
+
+
+
+
+
+.hovering img {
+    display: block;
+    position: relative;
+    transition: all .5s ease-out;
+}
+
+
+
+
+
+
+
+.hovering h4 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -500%);
+    color: #ECECEB;
+    transition: all .5s ease-in-out;
+    font-size: 1.25em;
+    width: 12em;
+}
+
+
+.blur {
+    backdrop-filter: blur(5px);
+    position: absolute;
+    background: rgba(355, 255, 315, .1);
+    border-radius: 5px;
+    width: 16em;
+    height: 6em;
+    top: 43%;
+    left: 50%;
+    transform: translate(90%, 0);
+    transition: all .5s ease-in-out;
+    box-shadow: 1px 1px 24px rgb(0, 0, 0, .5);
+}
+
+
+.hovering p {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 4px;
+    padding: 10px;
+    text-shadow: #000 2px 2px 4px;
+}
+
+
+
+
+
+
+// АНИМАЦИЯ ПРИ НАВЕДЕНИИ НА КАРТИНКУ
+
+
+.hovering:hover h4 {
+    transform: translate(-50%, -50%);
+}
+
+
+.hovering:hover .blur {
+    transform: translate(-50%, 0);
+}
+
+
+.hovering:hover img {
+    transform: scale(1.1);
+    filter: brightness(20%);
+}
+
+
+
+
+
+/*=========== FOOTER ===========*/
+
+.footer {
+    background-color: #000000;
+    padding: 30px 0;
+}
+
+.footer__row {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.footer__copyright {
+    color: #ffffff;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+/*======================= MEDIA SQUARITE HOME =====================*/
+
+@media (max-width:690px) {
+    .home__logo {
+        text-align: center;
+    }
+
+
+    .home__title {
+        margin-top: 20px;
+    }
+
+
+
+    .home__links {
+        flex-direction: column;
+        max-width: 25em;
+        height: 10em;
+    }
+
+    .home__link-vk {
+        margin: 0;
+        margin-bottom: 20px;
+        align-self: center;
+
+    }
+
+    .home__link-tg {
+        align-self: center;
+    }
+
+
+}
+
+
+
+
+@media (max-width:400px) {}
