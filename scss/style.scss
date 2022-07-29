@@ -36,6 +36,9 @@ body {
 
 
 
+
+
+
 .home__logo {
     padding-top: 2em;
     z-index: 10;
@@ -94,7 +97,7 @@ body {
 
 .home__arrow {
     position: relative;
-    margin-top: 2em;
+    margin-top: 1em;
     text-align: center;
 }
 
@@ -119,20 +122,20 @@ body {
 
 .home__links {
     position: absolute;
-    bottom: 2em;
+    bottom: 3em;
     left: 50%;
     transform: translate(-50%, 0);
     padding: 10px;
 
-    max-width: 40em;
+    min-width: 40em;
     height: 5em;
-    background-color: rgb(0, 0, 0, .6);
+    background-color: rgba(0, 217, 255, 0.14);
     color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 15px;
-    box-shadow: 1px -5px 35px rgba(8, 220, 239, 0.496);
+    backdrop-filter: blur(10px);
 }
 
 
@@ -147,6 +150,7 @@ body {
 
 .home__vk-text {
     padding: 0.5em 1em 0 0;
+    text-shadow: 1px 1px 2px #fff;
 }
 
 .home__link-tg {
@@ -155,6 +159,7 @@ body {
 
 .home__tg-text {
     padding: 0.5em 1em 0 0;
+    text-shadow: 1px 1px 2px #fff;
 }
 
 
@@ -205,7 +210,7 @@ body {
     line-height: 40px;
     letter-spacing: 0.07em;
     text-align: center;
-    font-size: 1.3em;
+    font-size: 1.9em;
     text-shadow: #000000 1px 1px 3px;
 }
 
@@ -276,7 +281,7 @@ body {
 
 .portfolio__about-title {
     font-family: 'Press Start 2P';
-    font-size: 1.3em;
+    font-size: clamp(14px, 4.5vw, 26px);
     text-align: center;
     color: #fff;
     text-shadow: #fff 1px 1px 8px;
@@ -318,6 +323,8 @@ body {
     display: block;
     position: relative;
     transition: all .5s ease-out;
+    overflow: hidden;
+    width: 100%;
 }
 
 
@@ -328,36 +335,37 @@ body {
 
 .hovering h4 {
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -500%);
     color: #ECECEB;
     transition: all .5s ease-in-out;
-    font-size: 1.25em;
+    font-size: clamp(12px, 2.3vw, 24px);
     width: 12em;
 }
 
 
 .blur {
-    backdrop-filter: blur(5px);
     position: absolute;
+    backdrop-filter: blur(5px);
     background: rgba(355, 255, 315, .1);
     border-radius: 5px;
-    width: 16em;
-    height: 6em;
-    top: 43%;
-    left: 50%;
-    transform: translate(90%, 0);
+    width: 80%;
+    height: 40%;
+    top: 40%;
+    left: 10%;
+    right: 0%;
+    transform: translate(130%, 0);
     transition: all .5s ease-in-out;
     box-shadow: 1px 1px 24px rgb(0, 0, 0, .5);
 }
 
 
 .hovering p {
-    font-size: 16px;
+    font-size: clamp(10px, 1.5vw, 16px);
     color: rgb(255, 255, 255);
     text-shadow: 1px 1px 4px;
-    padding: 10px;
+    padding: 12px;
     text-shadow: #000 2px 2px 4px;
 }
 
@@ -375,7 +383,7 @@ body {
 
 
 .hovering:hover .blur {
-    transform: translate(-50%, 0);
+    transform: translate(0%, 0);
 }
 
 
@@ -418,6 +426,26 @@ body {
 
 /*======================= MEDIA SQUARITE HOME =====================*/
 
+@media (max-width:2560px) {
+    .home__desc {
+        margin-top: 15em;
+    }
+
+}
+
+
+
+@media (max-width:1440px) {
+    .home__desc {
+        margin-top: 8em;
+    }
+
+}
+
+
+
+
+
 @media (max-width:690px) {
     .home__logo {
         text-align: center;
@@ -430,9 +458,14 @@ body {
 
 
 
+    .home__desc {
+        margin-top: 5em;
+    }
+
+
     .home__links {
         flex-direction: column;
-        max-width: 25em;
+        min-width: 25em;
         height: 10em;
     }
 
@@ -448,9 +481,47 @@ body {
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+    .portfolio__desc {
+        padding-top: 1em;
+    }
+
+
+
+
+
+    .portfolio__desc::before {
+        top: 0px;
+        left: -10px;
+        border-width: 2px 0 0 2px;
+    }
+
+
+
+    .portfolio__desc::after {
+        bottom: 0px;
+        right: -10px;
+        border-width: 0 2px 2px 0;
+    }
+
+
 }
 
 
 
 
-@media (max-width:400px) {}
+@media (max-width:425px) {
+    .home__desc {
+        margin-top: 10em;
+    }
+}
