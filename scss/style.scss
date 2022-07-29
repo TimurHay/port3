@@ -268,7 +268,6 @@ body {
 .portfolio__about-row {
     display: flex;
     justify-content: center;
-
 }
 
 
@@ -281,7 +280,7 @@ body {
 
 .portfolio__about-title {
     font-family: 'Press Start 2P';
-    font-size: clamp(14px, 4.5vw, 26px);
+    font-size: clamp(14px, 6vw, 26px);
     text-align: center;
     color: #fff;
     text-shadow: #fff 1px 1px 8px;
@@ -310,6 +309,7 @@ body {
     text-align: center;
     border: 4px #ffffff solid;
     border-radius: 15px;
+    max-width: 60%;
 }
 
 
@@ -340,7 +340,7 @@ body {
     transform: translate(-50%, -500%);
     color: #ECECEB;
     transition: all .5s ease-in-out;
-    font-size: clamp(12px, 2.3vw, 24px);
+    font-size: 1.2rem;
     width: 12em;
 }
 
@@ -350,7 +350,7 @@ body {
     backdrop-filter: blur(5px);
     background: rgba(355, 255, 315, .1);
     border-radius: 5px;
-    width: 80%;
+    max-width: 80%;
     height: 40%;
     top: 40%;
     left: 10%;
@@ -362,7 +362,7 @@ body {
 
 
 .hovering p {
-    font-size: clamp(10px, 1.5vw, 16px);
+    font-size: 0.8rem;
     color: rgb(255, 255, 255);
     text-shadow: 1px 1px 4px;
     padding: 12px;
@@ -435,6 +435,10 @@ body {
 
 
 
+
+////////////////////////////////////////
+
+
 @media (max-width:1440px) {
     .home__desc {
         margin-top: 8em;
@@ -442,6 +446,28 @@ body {
 
 }
 
+
+
+
+////////////////////////////////////
+ 
+@media (max-width:768px) {
+    .hovering h4 {
+        font-size: 1rem;
+    }
+
+    .hovering p {
+        font-size: 0.6rem;
+    }
+}
+
+
+
+
+
+
+
+////////////////////////////////////////
 
 
 
@@ -515,13 +541,54 @@ body {
     }
 
 
+
+
+    .portfolio__about figure+figure {
+        margin-left: 0;
+    }
+
+
+
+
+    .portfolio__about-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+    .portfolio__about-desc {
+        margin: 1em 0 2em 0;
+    }
+
+
+    .hovering {
+        margin: 0;
+        margin-top: 2em;
+    }
+
 }
 
+
+
+
+
+
+
+
+////////////////////////////////// 
 
 
 
 @media (max-width:425px) {
     .home__desc {
         margin-top: 10em;
+    }
+
+
+
+
+    .hovering p {
+        font-size: 0.7rem;
     }
 }
